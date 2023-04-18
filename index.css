@@ -1,0 +1,50 @@
+:root{
+    --offwhite: hsl(0, 0%, 94%)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background-color: var(--offwhite);
+    
+}
+
+.line{
+    width: 100%;
+    background-color: gray;
+    height: 0.2px;
+}
+
+
+
+.arrow-btn > img{
+    object-fit: contain;
+    width: 15px;
+    
+}
+@media screen and (max-width: 375px)
+{
+    .arrow-btn{
+        background-color: hsl(259, 100%, 65%);
+        margin: 0 auto;
+        margin-bottom: -15px;
+        
+        width: 20px;
+        height: 20px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
