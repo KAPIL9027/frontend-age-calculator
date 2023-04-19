@@ -1,3 +1,10 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+body{
+   width: 100vw;
+   height: 100vh;
+   justify-content: center;
+}
 :root{
     --offwhite: hsl(0, 0%, 94%)
 }
@@ -5,10 +12,44 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Poppins', 'sans-serif';
     
 }
 
+
+.age-calculator{
+    background-color: white;
+    padding: 1.5rem;
+    margin: 3rem 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50%;
+}
+.date-form{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+label{
+    color: gray;
+    font-size: 0.7rem;
+}
+.box > input{
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 3rem;
+}
 html{
     width: 100vw;
     height: 100vh;
@@ -31,7 +72,18 @@ body{
     width: 15px;
     
 }
-@media screen and (max-width: 375px)
+
+.down-header{
+    color: hsl(259, 100%, 65%);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.age{
+    color: black;
+}
+
+@media screen and (max-width: 376px)
 {
     .arrow-btn{
         background-color: hsl(259, 100%, 65%);
@@ -46,5 +98,9 @@ body{
         justify-content: center;
         align-items: center;
         
+    }
+
+    .age-calculator-down{
+        margin-top: 2rem;
     }
 }
