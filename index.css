@@ -3,8 +3,17 @@
 body{
    width: 100vw;
    height: 100vh;
+   display: flex;
+   align-items: center;
    justify-content: center;
+
 }
+
+::placeholder{
+color: black;
+opacity: 1;
+}
+
 :root{
     --offwhite: hsl(0, 0%, 94%)
 }
@@ -16,40 +25,59 @@ body{
     
 }
 
+.age-calculator-form{
+display: flex;
+flex-direction: column;
+gap: 0;
+}
 
 .age-calculator{
     background-color: white;
+    width: 25rem;
     padding: 1.5rem;
     margin: 3rem 1rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 50%;
+    border-bottom-right-radius: 30%;
 }
 .date-form{
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin: 1rem;
+    gap: 0.7rem;
 }
 .box{
     display: flex;
     flex-direction: column;
-    width: 3rem;
+    width: 5rem;
     gap: 0.5rem;
-    align-items: center;
 }
 
 label{
-    color: gray;
+    color: darkgray;
+    font-weight: bold;
     font-size: 0.7rem;
 }
 .box > input{
-    height: 2rem;
+    height: 2.25rem;
     border-radius: 5px;
-    border: 1px solid gray;
-    width: 3rem;
+    border: 0.2px solid gray;
+    width: 85%;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    padding: 0.5rem;
 }
+
+.box > input:focus{
+    outline: 2px solid hsl(259, 100%, 65%);
+}
+
+.arrow-btn:hover{
+background-color: black;
+z-index: 200;
+}
+
 html{
     width: 100vw;
     height: 100vh;
@@ -61,12 +89,35 @@ body{
 
 .line{
     width: 100%;
-    background-color: gray;
+    background-color: lightgray;
     height: 0.2px;
+    position: relative;
+    top: 50%;
 }
 
 
+.arrow-btn{
+    background-color: hsl(259, 100%, 65%);
+    margin: 0 auto;
+    margin-bottom: -15px;
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25%;
+}
 
+.btn{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    height: 3rem;
+
+}
 .arrow-btn > img{
     object-fit: contain;
     width: 15px;
@@ -83,13 +134,38 @@ body{
     color: black;
 }
 
+.error-msg{
+    font-size: 0.6rem;
+    color: red;
+}
+
+.not-show{
+    display: none;
+}
 @media screen and (max-width: 376px)
 {
+    body{
+        align-items: flex-start;
+    }
+    .date-form{
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    
+    .btn{
+       display: block; 
+
+    }
+    .box > input{
+        height: 1.5rem;
+        border: 1px solid lightgray;
+    }
+
     .arrow-btn{
+        position: static;
         background-color: hsl(259, 100%, 65%);
         margin: 0 auto;
         margin-bottom: -15px;
-        
         width: 20px;
         height: 20px;
         padding: 0.5rem;
@@ -97,9 +173,11 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        top: 50%;
+        z-index: 101;
         
     }
-
     .age-calculator-down{
         margin-top: 2rem;
     }

@@ -18,17 +18,20 @@
   <div class="age-calculator">
    <div class="age-calculator-form">
     <form class="date-form">
-      <div class = "box">
+      <div class = "box day-box">
         <label for="day">DAY</label>
-        <input class="input" name="day" id="day">
+        <input placeholder="DD" class="input" name="day" id="day">
+        <div id="day-err" class="error-msg not-show">Must be a valid day</div>
       </div>
-      <div class = "box">
+      <div class = "box month-box">
         <label for="month">MONTH</label>
-        <input class="input" name="month" id="month">
+        <input placeholder="MM" class="input" name="month" id="month">
+        <div id="month-err" class="error-msg not-show">Must be a valid month</div>
       </div>
-      <div class = "box">
+      <div class = "box year-box">
         <label for="year">YEAR</label>
-        <input class="input" name="year" id="year">
+        <input placeholder="YY" class="input" name="year" id="year">
+        <div id="year-err" class="error-msg not-show">Must be a valid year</div>
       </div>
     </form>
     <div class="btn">
@@ -39,9 +42,9 @@
     </div>
    </div>
    <div class="age-calculator-down">
-    <h2 class="down-header">38 <span class="age">years</span></h2>
-    <h2 class="down-header">3 <span class="age">months</span></h2>
-    <h2 class="down-header">26 <span class="age">days</span></h2>
+    <h2 class="down-header"><span id="years">_ _</span> <span class="age">years</span></h2>
+    <h2 class="down-header"><span id="months">_ _</span> <span class="age">months</span></h2>
+    <h2 class="down-header"><span id="days">_ _</span><span class="age">days</span></h2>
    </div>
   </div>
   <div class="attribution" style="position: fixed;left: 10px;top: 95%">
