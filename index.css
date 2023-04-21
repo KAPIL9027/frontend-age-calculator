@@ -1,5 +1,4 @@
-@import url('https://fonts.google.com/specimen/Poppins');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@1,900&display=swap');
 body{
    width: 100vw;
    height: 100vh;
@@ -9,10 +8,6 @@ body{
 
 }
 
-::placeholder{
-color: black;
-opacity: 1;
-}
 
 :root{
     --offwhite: hsl(0, 0%, 94%)
@@ -43,7 +38,7 @@ gap: 0;
 }
 .date-form{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.7rem;
 }
 .box{
@@ -59,9 +54,9 @@ label{
     font-size: 0.7rem;
 }
 .box > input{
-    height: 2.25rem;
+    height: 1.5rem;
     border-radius: 5px;
-    border: 0.2px solid gray;
+    border: 0.2px solid lightgray;
     width: 85%;
     font-size: large;
     font-weight: bold;
@@ -100,15 +95,15 @@ body{
     background-color: hsl(259, 100%, 65%);
     margin: 0 auto;
     margin-bottom: -15px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     padding: 0.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 25%;
+    top: 10%;
 }
 
 .btn{
